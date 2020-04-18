@@ -2,6 +2,56 @@
 <html>
     <head>
         <title>My wegpage</title>
+        <meta name="viewport" content="width = device-width, initial-scale=1.0">
+        <style>
+            input[type = text]{ background-color: burlywood;}
+            input[type = radio]{ margin: 30px;}
+            input:hover {background-color: blue}
+            @media print {
+                #Heading1{
+                    display: none
+                }
+            }
+            @media (min-width: 700px){
+                body{
+                    background-color: white;
+                }
+                h1::before{
+                    content: "Welcome to my Webpage";
+                }
+            }
+            @media (max-width: 699px){
+                body{
+                    background-color: blue;
+                }
+                h1::before{
+                    content: "Welcome, dude!";
+                }
+            }
+            .container{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .container > div {
+                background-color: turquoise;
+                font-size: 20px;
+                margin: 20px;
+                padding: 20px;
+                width: 200px;
+            }
+            .grid{
+                background-color: yellowgreen;
+                display: grid;
+                padding: 20px;
+                grid-column-gap: 20px;
+                grid-row-gap: 10px;
+                grid-template-columns: 200px auto auto 20px;
+            }
+            .grid-item{
+                background-color:white;
+                font-size:20px;
+            }
+        </style>
     </head>
     <body>
         <ul>
@@ -23,7 +73,29 @@
                         <option value="United States">
                  </datalist>
         </div>
-
+        <div>
+            <input name="Name" type = "text" placeholder="Ihr Name">
+        </div>
+        <h1></h1>
         <h2 id="Heading1">1. Ueberschrift</h2>
+        <div class="container">
+            <div>example box A</div>
+            <div>example box B</div>
+            <div>example box C</div>
+            <div>example box D</div>
+            <div>example box E</div>
+            <div>example box F</div>
+        </div>
+        <div class = "grid">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+            <div class="grid-item">9</div>
+        </div>        
     </body>
 </html>
